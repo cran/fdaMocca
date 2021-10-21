@@ -1,0 +1,35 @@
+
+export(mocca, 
+       estimate.mocca,
+       criteria.mocca,
+       logLik.mocca,
+       print.mocca,
+       plot.mocca,
+       print.summary.mocca, summary.mocca
+    )
+
+
+importFrom(graphics, abline, plot, hist, lines, par, grid, legend, title, axis,image,points,text)
+importFrom(stats, cor, var, printCoefmat, kmeans, setNames,cov2cor)
+importFrom(mvtnorm, dmvnorm)
+importMethodsFrom(Matrix,rowSums)
+importFrom("utils", "data")
+import(foreach)
+importFrom("grDevices", "rainbow")
+
+
+
+## importFrom("graphics", "grid", "legend", "title")
+## importFrom("stats", "kmeans", "setNames")
+
+
+#importFrom(parallel, parLapply, parSapply, makeCluster, detectCores, stopCluster)
+#importFrom(doParallel, registerDoParallel
+#import(fda)  ## imports all exported variables from fda package
+
+S3method(print, mocca)
+S3method(print, summary.mocca)
+S3method(summary, mocca)
+S3method(logLik, mocca)
+S3method(plot, mocca)
+
