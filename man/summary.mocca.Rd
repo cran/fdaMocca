@@ -38,7 +38,7 @@ summaries from it.
 \item{r}{number of scalar covariates if model with covariates}
 \item{sig2}{residual variance estimate for the functional data and for the scalar covariates (if the model is with covariates)}
 \item{p}{total number of the estimated parameters in the model}
-\item{tab_numOfCurves_cluster}{number of curves in each cluster as a table}
+\item{tab_numOfCurves_cluster}{number of objects/curves in each cluster as a table. Here 'hard' clustering is applied, where each object/curve belongs to a cluster with the highest posterior probability.}
 \item{covariates_est}{mean value estimates for scalar covariates given cluster belongings (if the model is with covariates)}
 \item{t.probs}{estimated probabilities of belonging to each cluster}
 \item{crita}{a table with the maximized log likelihood, AIC, BIC and Shannon entropy values of the fitted model}

@@ -1,0 +1,6 @@
+
+0.1-1
+
+* summary.mocca: explanation of how numbers of curves/objects in each cluster are calculated is given in the .Rd file 
+
+* mocca: corrected number of changing years/curves when plotting cluster means at each iteration of the EM algorithm

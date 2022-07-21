@@ -1,6 +1,7 @@
-f61d7d4eb6717c8cb096a9d65ea6ea5e *DESCRIPTION
+597e8c321c534841202f9c11b4b07f44 *ChangeLog
+26b2761755fc1fa80bd5466d37d41e33 *DESCRIPTION
 7aed8074883bebf0bce25223ea5ab32a *NAMESPACE
-279da406c6d67ae9d463c1ddfcb9b8c6 *R/fitmocca.r
+a99e6fa1d88342a06d89e9dfce196979 *R/fitmocca.r
 a988710fceb06ef2c8e2b16ab9462fa8 *R/plot.mocca.r
 703038972e2c7a5fca21385c4feff9f6 *R/print.mocca.r
 b124f0b01903108ee8efc36f76e600c2 *R/small_functions.r
@@ -14,9 +15,9 @@ e5f6164a52c80edd810bca5fd2291f46 *data/varve_full.rda
 5673a425b40b88271a68c55bc5665bb4 *man/estimate.mocca.Rd
 ec77b0e8c2cbeba53cb78de34b8a2ab9 *man/fdaMocca-package.Rd
 6b209509f4f99a10e83e2311f99fa566 *man/logLik.mocca.Rd
-331f85ee79a1e9d9f158eabd27b3d6d4 *man/mocca.Rd
+8aaca7ab1919485735688aaac19b7876 *man/mocca.Rd
 bc6cbeb5b1769d6de68447895f2113e2 *man/plot.mocca.Rd
 ae1c18fb96b9b0b60a852fd9ee6db64a *man/print.mocca.Rd
 92193612bc83f0cebd683e783a39c7ee *man/simdata.Rd
-0094d0a804beb17275e49c5e76848ebf *man/summary.mocca.Rd
+bfa65695bdbb19f80d495d3557fa3e59 *man/summary.mocca.Rd
 7647996dc1eb24fb80d2224af57a5031 *man/varve.Rd

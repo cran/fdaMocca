@@ -67,7 +67,7 @@ mocca(data=stop("No data supplied"), K = 5, q = 6, h = 2,
 
   \item{Mstep.tol}{the tolerance to use within iterative procedure to estimate model parameters (default: Mstep.tol=1e-4).}
 
-   \item{EMplot}{\code{TRUE/FALSE}, whether plots of cluster means with some summary information should be produced at each iteration of the EM algorithm (default: \code{FALSE}).} 
+   \item{EMplot}{\code{TRUE/FALSE}, whether plots of cluster means with some summary information should be produced at each iteration of the EM algorithm (default: \code{TRUE}).} 
 
   \item{trace}{\code{TRUE/FALSE}, whether to print the current values of \eqn{\sigma^2} and \eqn{\sigma^2_x} for the covariates at each iteration of \code{M step}  (default: \code{FALSE}).}
 

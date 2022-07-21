@@ -183,14 +183,14 @@ estimate.mocca <- function(data, K = 5, q = 6, h = 2, random=TRUE, B=NULL, svd=T
        ylim <- c(min(cluster.mean)-.1*min(cluster.mean), max(cluster.mean)+.1*max(cluster.mean)) 
        ##plot(data$grid,data$grid,type='n',ylab="Cluster Mean",xlab=paste('ll =',round(score.hist[iter+1,'ll']),'\n sigmas =',round(score.hist[iter+1,1],3), 'and',round(score.hist[iter+1,2],3)),ylim=c(-45,55))
        if (length(sigma)==2){ ## model with covariates...
-        ll <- round(score.hist[iter+1,'ll']) ## current loglik
+        ll <- round(score.hist[iter+1,'ll'],3) ## current loglik
         sig2 <- round(score.hist[iter+1,1],3) ## current sig^2
         sig2x <- round(score.hist[iter+1,2],3) ## current sig^2 of covariates, sig2_x
         plot(data$grid,data$grid,type='n',ylab="Cluster Mean", ylim=ylim,
             xlab=bquote("ll" ==.(ll) ~ ", " ~ sigma^2 ==.(sig2) ~ "and" ~ sigma[x]^2 ==.(sig2x)) )
         new.prop <- parameters1$tag.pi
       } else{ ## model without covariates...
-          ll <- round(score.hist[iter+1,'ll']) ## current loglik
+          ll <- round(score.hist[iter+1,'ll'],3) ## current loglik
           sig2 <- round(score.hist[iter+1,1],3) ## current sig^2
           plot(data$grid,data$grid,type='n',ylab="Cluster Mean", ylim=ylim,
              xlab=bquote("ll" ==.(ll) ~ "and" ~ sigma^2 ==.(sig2)) )
@@ -200,9 +200,10 @@ estimate.mocca <- function(data, K = 5, q = 6, h = 2, random=TRUE, B=NULL, svd=T
        title(paste(format(round(Sys.time()-nu,2)),'with iteration no:',iter))
        grid()
        legend('topright',legend=round(new.prop,5),lty=1,col=c(1:K)+1)
-       legend('bottomleft',legend=paste('loglik rel diff =',round(abs(ll.old - ll.new)/(.1 + abs(ll.new)),5)))
-       legend('topleft',legend=paste('Num of changing years =',round(sum(initials$N*abs(old.prop-new.prop)),2) ))
+       legend('bottomleft',legend=paste('loglik rel diff =',round(abs(ll.old - ll.new)/(.1 + abs(ll.new)),3)))
+       legend('topleft',legend=paste('Num of changing curves =',round(sum(initials$N*abs(old.prop-new.prop)),2) ))
        lines(data$grid,design$FullS%*%parameters1$lambda.zero,lty=2,lwd=3);for(k in 1:K) lines(data$grid,cluster.mean[k,], col = k+1, lwd = 2)
+       old.prop <- new.prop 
       } ## end if (EMplot)
 
      max.ll<-max(score.hist[,'ll'])
@@ -238,7 +239,6 @@ estimate.mocca <- function(data, K = 5, q = 6, h = 2, random=TRUE, B=NULL, svd=T
               }
      }
      nu<-Sys.time()
-     old.prop <- parameters1$tag.pi
   } ## end while loop
 
   if (!is.null(cl)){
